@@ -1,0 +1,50 @@
+# Set the ORPort, DirPort, and ExitPolicy options
+ORPort 9001
+DirPort 9030
+ExitPolicy accept *:53,reject *:* # Only allow outgoing traffic on DNS port (53)
+
+# Set the ContactInfo and Nickname options
+ContactInfo your.email@example.com
+Nickname MyExitNode
+
+# Set the BandwidthRate, BandwidthBurst, and AccountingMax options
+BandwidthRate 1000 KBytes
+BandwidthBurst 1500 KBytes
+AccountingMax 5 GBytes
+
+# Set the RelayBandwidthRate and RelayBandwidthBurst options
+RelayBandwidthRate 1000 KBytes
+RelayBandwidthBurst 1500 KBytes
+
+# Set the Logging options
+Log notice stdout
+Log notice file /var/log/tor/notices.log
+Log warn file /var/log/tor/warnings.log
+Log err file /var/log/tor/errors.log
+
+# Set the IPv6Exit option
+IPv6Exit 1
+
+# Set the V3IdentOnion option
+V3IdentOnion 1
+
+# Set the HiddenServiceStatistics option
+HiddenServiceStatistics 0
+
+# Set the AllowSingleHopExits option
+AllowSingleHopExits 0
+
+# Set the ExitPolicyRejectPrivate option
+ExitPolicyRejectPrivate 1
+
+# Set the ExitRelay option
+ExitRelay 1
+
+# Set the LongLivedPorts option
+LongLivedPorts 80,443,465,587,993,995
+
+# Set the ClientRejectInternalAddresses option
+ClientRejectInternalAddresses 1
+
+# Set the NumCPUs option to limit CPU usage
+NumCPUs 2
