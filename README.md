@@ -20,3 +20,9 @@ Here's what each option does:
 `LongLivedPorts`: Specifies the ports that are likely to be used for long-lived connections.
 `ClientRejectInternalAddresses`: Disallows connections to internal IP addresses.
 `NumCPUs`: Limits the number of CPUs used by the Tor daemon.
+
+# NOTE:
+
+In this configuration file, the exit policy only allows outgoing traffic on port 53, which is used for DNS requests. This is a reduced exit policy that limits the risk of abuse of the exit node while still allowing it to be useful for common Internet activities.
+
+Again, please note that this is just an example configuration and may need to be adjusted depending on your specific use case and network configuration.
